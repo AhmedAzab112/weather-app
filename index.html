@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark  py-5">
+        <div class="container">
+            <a class="navbar-brand d-flex" href="index.html">
+                <img src="images/logo2x.png" width="70" alt="">
+                <div class="d-flex flex-column ps-3">
+                    <span class="text-light fs-6 fw-bold">Weather</span>
+                    <span class="logo-desc">tagline goes here</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto pe-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="main-background-image">
+            <div class="container px-5 position-relative">
+                <div class="search">
+                    <div class="search-width m-auto position-relative d-flex align-items-center">
+                        <input class="form-control h-100 w-100 rounded-5 border-0 py-3 px-3"
+                            placeholder="Find your location..." type="text" name="" id="" onkeydown="getDataWithSearch(this.value)">
+                        <button class="btn position-absolute rounded-5 py-2" onclick="getDataWithSearch(this.value)">Find</button>
+                    </div>
+                </div>
+                <div class="cards m-auto">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 py-sm-5 py-lg-0">
+                            <div class="card border-0">
+                                <div class="card-header d-flex justify-content-between">
+                                    <span id="country_current_day"></span>
+                                    <span id="country_current_date"></span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="state pb-4">
+                                        <span id="country_name" class="mb-5"></span>
+                                    </div>
+                                    <div class="wheather-status d-flex">
+                                        <h1 id="weather_degree" style="font-size: 70px; font-weight: 900; color: white;"></h1>
+                                        <img id="weather_icon" src="" width="100" class="ps-5 w-100" alt="">
+                                    </div>
+                                    <div class="cloud-status pt-5">
+                                        <span id="weather_condation" class="text-info">Partly cloudy</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex">
+                                    <div class="ps-4">
+                                        <img src="images/icon-umberella.png" alt="">
+                                        <span id="country_wind_uv"></span>
+                                    </div>
+                                    <div class="ps-4">
+                                        <img src="images/icon-wind.png" alt="">
+                                        <span id="country_wind_kph"></span>
+                                    </div>
+                                    <div class="ps-4">
+                                        <img src="images/icon-compass.png" alt="">
+                                        <span id="country_wind_dir"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 py-sm-5 py-lg-0">
+                            <div class="card border-0" style="background-color: #262936;">
+                                <div class="card-header d-flex justify-content-center" style="background-color: #262936;">
+                                    <span id="country_two_day"></span>
+                                </div>
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img id="weather_two_icon" src="" class="pt-3" width="50" alt="">
+                                    <span id="weather_two_degree" class="text-white fw-bold pt-3"></span>
+                                    <span id="weather_two_small_degree" class="text-mutted"></span>
+                                    <span id="weather_two_status" class="text-info py-3"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 py-sm-5 py-lg-0">
+                            <div class="card border-0">
+                                <div class="card-header d-flex justify-content-center">
+                                    <span id="country_three_day"></span>
+                                </div>
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <img id="weather_three_icon" src="" class="pt-3" width="50" alt="">
+                                    <span id="weather_three_degree" class="text-white fw-bold pt-3"></span>
+                                    <span id="weather_three_small_degree" class="text-mutted"></span>
+                                    <span id="weather_three_status" class="text-info py-3"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="position-fixed bottom-0 w-100 d-flex align-items-center">
+        <div class="container px-5">
+            <div class="row ps-5">
+                <div class="col-lg-6 py-sm-1">
+                    <div class="w-100 m-auto position-relative d-flex align-items-center">
+                        <input class="form-control rounded-5 border-0 py-3 px-3"
+                            placeholder="Enter your email to subscribe..." type="text" name="" id="">
+                        <button class="btn position-absolute rounded-5 py-2">Subsribe</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 py-sm-1 text-center">
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook rounded-circle p-lg-3 p-sm-2" style="background-color: #1E202B; color: #009AD8;"></i>
+                        <i class="fa-brands fa-twitter rounded-circle p-lg-3 p-sm-2" style="background-color: #1E202B; color: #009AD8;"></i>
+                        <i class="fa-brands fa-google-plus rounded-circle p-lg-3 p-sm-2" style="background-color: #1E202B; color: #009AD8;"></i>
+                        <i class="fa-brands fa-pinterest rounded-circle p-lg-3 p-sm-2" style="background-color: #1E202B; color: #009AD8;"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 pt-lg-4">
+                    <span class="text-light">Copyright 2014 Company name. Designed by Themezy. All rights reserved</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

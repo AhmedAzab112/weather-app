@@ -1,0 +1,207 @@
+* {
+    font-family: sans-serif !important;
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+
+body {
+    background-color: #1E202B !important;
+}
+
+
+.navbar .logo-desc {
+    color: #BFC1C8 !important;
+    font-size: 10px !important;
+}
+
+.navbar .nav-item {
+    padding: 0 10px;
+    font-size: medium;
+}
+
+
+.navbar .nav-item .active {
+    box-sizing: border-box !important;
+    border: 2px solid #009AD8 !important;
+    border-radius: 30px !important;
+    padding: 2px 20px;
+    color: #009AD8 !important;
+}
+
+.navbar .nav-item a {
+    border: 2px solid transparent !important;
+    border-radius: 50px !important;
+    padding: 2px 20px !important;
+    color: white;
+    transition: all 0.5s;
+}
+
+.navbar .nav-item a:hover {
+    border: 2px solid #009AD8 !important;
+    color: #009AD8 !important;
+}
+
+
+main .main-background-image {
+    background-image: url(../images/banner.png);
+    background-size: cover;
+    height: 360px;
+}
+
+main .main-background-image .search .search-width {
+    width: 92% !important;
+}
+
+main .main-background-image .cards {
+    width: 92% !important;
+    padding-top: 90px;
+}
+
+main .main-background-image .cards .card {
+    min-height: 330px !important;
+    background-color: #323544;
+    color: #BABAC4;
+}
+
+main .main-background-image .cards .card .card-header {
+    background-color: #323544;
+    color: #BABAC4;
+}
+
+main .main-background-image .search {
+    padding-top: 75px !important;
+}
+
+main .main-background-image .search input {
+    background-color: #1E202B !important;
+    color: white !important;
+}
+
+main .main-background-image .search button {
+    background-color: #009AD8 !important;
+    color: #EFE5EA !important;
+    right: 5px;
+    padding: 7px 30px !important;
+}
+
+
+
+footer {
+    background-color: #262936 !important;
+    height: 180px;
+}
+
+footer input {
+    background-color: #1E202B !important;
+    color: white !important;
+}
+
+footer button {
+    background-color: #009AD8 !important;
+    color: #EFE5EA !important;
+    right: 5px;
+    padding: 22px 20px !important;
+}
+footer svg:hover {
+    background-color: #009AD8 !important;
+    color: #EFE5EA !important;
+}
+
+
+/* contact page */
+section .stipper {
+    width: 92% !important;
+    background-color: #262936;
+}
+section .main .card {
+    min-height: 330px !important;
+    background-color: #262936;
+    color: #BABAC4;
+}
+section .main .card img{
+    width: 4% !important;
+    height: 7% !important;
+}
+section .main .card span{
+    width: 220px !important;
+    font-size: 14px;
+}
+section .main input:hover{
+    border-color: #009AD8 !important;
+}
+section .main textarea:hover{
+    border-color: #009AD8 !important;
+}
+
+
+
+
+
+
+
+/* @media (min-width: 576px) { ... }
+
+@media (min-width: 768px) { ... }*/
+
+@media all and (max-width: 1300px) {
+    main .main-background-image .cards {
+        width: 100% !important;
+    }
+
+    .main-background-image .container {
+        padding-bottom: 200px !important;
+    }
+
+    .wheather-status {
+        display: block !important;
+    }
+
+    .wheather-status h1 {
+        font-size: 30px !important;
+    }
+
+    .wheather-status img {
+        width: 20% !important;
+        padding-left: 0 !important;
+    }
+
+    .cards .card .cloud-status {
+        padding-top: 0 !important;
+    }
+
+    footer {
+        height: 200px !important;
+    }
+
+    footer svg {
+        font-size: small !important;
+
+    }
+}
+
+
+@media all and (max-width: 991.20px) {
+    .navbar .collapse .navbar-nav {
+        background-color: #262936 !important;
+        text-align: center !important;
+        padding: 0px !important;
+        margin-top: 30px !important;
+    }
+
+    .navbar .collapse .navbar-nav .nav-item {
+        padding-top: 10px !important;
+        padding-bottom: 8px !important;
+        border-bottom: 1px solid #313440 !important;
+        z-index: 999;
+    }
+
+    .navbar .collapse .navbar-nav .nav-item a {
+        border: 0 !important;
+    }
+}
+
+/* @media (min-width: 1400px) { ... } */
